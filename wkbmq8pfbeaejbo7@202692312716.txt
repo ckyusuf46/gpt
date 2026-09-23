@@ -1,0 +1,301 @@
+[2026-09-23 01:27:16:181:181012  wkbmq8pfbeaejbo7]:MiFlash 2025-07-20-0
+[2026-09-23 01:27:16:184:184013  wkbmq8pfbeaejbo7]:Thread id:16 Thread name:
+[2026-09-23 01:27:16:184:184013  wkbmq8pfbeaejbo7]:image path:C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0
+[2026-09-23 01:27:16:185:185013  wkbmq8pfbeaejbo7]:env android path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Google\Android"
+[2026-09-23 01:27:16:185:185013  wkbmq8pfbeaejbo7]:script :C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\flash_all.bat
+[2026-09-23 01:27:16:207:207018  wkbmq8pfbeaejbo7]:Physical Memory Usage:3358720 Byte
+[2026-09-23 01:27:16:207:207018  wkbmq8pfbeaejbo7]:start process id 27252 name cmd
+[2026-09-23 01:27:16:228:228023  wkbmq8pfbeaejbo7]:info1:$if exist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) ) 
+[2026-09-23 01:27:16:228:228023  wkbmq8pfbeaejbo7]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[2026-09-23 01:27:16:228:228023  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[2026-09-23 01:27:16:228:228023  wkbmq8pfbeaejbo7]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2026-09-23 01:27:16:290:290037  wkbmq8pfbeaejbo7]:info1:$(set version=1 ) 
+[2026-09-23 01:27:16:290:290037  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set version=0 
+[2026-09-23 01:27:16:291:291037  wkbmq8pfbeaejbo7]:info1:$set anticheck="antirollback check pass" 
+[2026-09-23 01:27:16:291:291037  wkbmq8pfbeaejbo7]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2026-09-23 01:27:16:291:291037  wkbmq8pfbeaejbo7]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[2026-09-23 01:27:16:317:317043  wkbmq8pfbeaejbo7]:info1:"antirollback check pass" 
+[2026-09-23 01:27:16:320:320044  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar product   2>&1  | findstr "ares"   || 
+[2026-09-23 01:27:16:349:349051  wkbmq8pfbeaejbo7]:info1:product: ares
+[2026-09-23 01:27:16:352:352050  wkbmq8pfbeaejbo7]:info1:"Now Check Finished ......"
+[2026-09-23 01:27:16:353:353051  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[2026-09-23 01:27:16:354:354051  wkbmq8pfbeaejbo7]:info1:fastboot -s devicename flash crclist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\crclist.txt   ||  
+[2026-09-23 01:27:16:354:354051  wkbmq8pfbeaejbo7]:info1: fastboot -s devicename flash sparsecrclist C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\sparsecrclist.txt   || 
+[2026-09-23 01:27:16:354:354051  wkbmq8pfbeaejbo7]:info1:) 
+[2026-09-23 01:27:16:384:384058  wkbmq8pfbeaejbo7]:info1:crc: 1
+[2026-09-23 01:27:16:415:415066  wkbmq8pfbeaejbo7]:info2:Warning: skip copying crclist image avb footer (crclist partition size: 0, crclist image size: 439).
+[2026-09-23 01:27:16:453:453073  wkbmq8pfbeaejbo7]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.038s]
+[2026-09-23 01:27:16:455:455074  wkbmq8pfbeaejbo7]:info2:Writing 'crclist'                                  OKAY [  0.002s]
+[2026-09-23 01:27:16:456:456075  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.044s
+[2026-09-23 01:27:16:487:487081  wkbmq8pfbeaejbo7]:info2:Warning: skip copying sparsecrclist image avb footer (sparsecrclist partition size: 0, sparsecrclist image size: 436).
+[2026-09-23 01:27:16:525:525089  wkbmq8pfbeaejbo7]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.038s]
+[2026-09-23 01:27:16:528:528090  wkbmq8pfbeaejbo7]:info2:Writing 'sparsecrclist'                            OKAY [  0.003s]
+[2026-09-23 01:27:16:528:528090  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.045s
+[2026-09-23 01:27:16:532:532091  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename erase boot_ab    || 
+[2026-09-23 01:27:16:830:830157  wkbmq8pfbeaejbo7]:info2:Erasing 'boot_ab'                                  (bootloader) Partition boot_a erase successfully
+[2026-09-23 01:27:17:062:062210  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition boot_b erase successfully
+[2026-09-23 01:27:17:062:062210  wkbmq8pfbeaejbo7]:info2:OKAY [  0.506s]
+[2026-09-23 01:27:17:063:063210  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.507s
+[2026-09-23 01:27:17:066:066210  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename erase expdb   || 
+[2026-09-23 01:27:17:275:275258  wkbmq8pfbeaejbo7]:info2:Erasing 'expdb'                                    OKAY [  0.184s]
+[2026-09-23 01:27:17:275:275258  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.186s
+[2026-09-23 01:27:17:281:281258  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename erase metadata   || 
+[2026-09-23 01:27:17:399:399285  wkbmq8pfbeaejbo7]:info2:Erasing 'metadata'                                 OKAY [  0.089s]
+[2026-09-23 01:27:17:399:399285  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.090s
+[2026-09-23 01:27:17:403:403286  wkbmq8pfbeaejbo7]:info1:"Now Start Flash ......"
+[2026-09-23 01:27:17:404:404286  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash preloader_ab 		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\preloader_ares.bin  	  || 
+[2026-09-23 01:27:17:436:436293  wkbmq8pfbeaejbo7]:info2:Warning: skip copying preloader_ab image avb footer (preloader_ab partition size: 0, preloader_ab image size: 454780).
+[2026-09-23 01:27:17:479:479303  wkbmq8pfbeaejbo7]:info2:Sending 'preloader_ab' (444 KB)                    OKAY [  0.043s]
+[2026-09-23 01:27:17:485:485305  wkbmq8pfbeaejbo7]:info2:Writing 'preloader_ab'                             (bootloader) Partition preloader_a flashed successfully
+[2026-09-23 01:27:17:493:493306  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition preloader_b flashed successfully
+[2026-09-23 01:27:17:494:494306  wkbmq8pfbeaejbo7]:info2:OKAY [  0.014s]
+[2026-09-23 01:27:17:494:494306  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.061s
+[2026-09-23 01:27:17:499:499307  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash vbmeta_ab         C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta.img            	  || 
+[2026-09-23 01:27:17:530:530314  wkbmq8pfbeaejbo7]:info2:Warning: skip copying vbmeta_ab image avb footer (vbmeta_ab partition size: 0, vbmeta_ab image size: 4096).
+[2026-09-23 01:27:17:568:568324  wkbmq8pfbeaejbo7]:info2:Sending 'vbmeta_ab' (4 KB)                         OKAY [  0.038s]
+[2026-09-23 01:27:17:569:569323  wkbmq8pfbeaejbo7]:info2:Writing 'vbmeta_ab'                                (bootloader) Partition vbmeta_a flashed successfully
+[2026-09-23 01:27:17:570:570323  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition vbmeta_b flashed successfully
+[2026-09-23 01:27:17:570:570323  wkbmq8pfbeaejbo7]:info2:OKAY [  0.002s]
+[2026-09-23 01:27:17:570:570323  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.044s
+[2026-09-23 01:27:17:575:575324  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash vbmeta_system_ab  C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta_system.img     	  || 
+[2026-09-23 01:27:17:605:605331  wkbmq8pfbeaejbo7]:info2:Warning: skip copying vbmeta_system_ab image avb footer (vbmeta_system_ab partition size: 0, vbmeta_system_ab image size: 4096).
+[2026-09-23 01:27:17:643:643340  wkbmq8pfbeaejbo7]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.038s]
+[2026-09-23 01:27:17:644:644341  wkbmq8pfbeaejbo7]:info2:Writing 'vbmeta_system_ab'                         (bootloader) Partition vbmeta_system_a flashed successfully
+[2026-09-23 01:27:17:645:645341  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition vbmeta_system_b flashed successfully
+[2026-09-23 01:27:17:645:645341  wkbmq8pfbeaejbo7]:info2:OKAY [  0.002s]
+[2026-09-23 01:27:17:646:646340  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.044s
+[2026-09-23 01:27:17:650:650342  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash vbmeta_vendor_ab  C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\vbmeta_vendor.img     	  || 
+[2026-09-23 01:27:17:678:678347  wkbmq8pfbeaejbo7]:info2:Warning: skip copying vbmeta_vendor_ab image avb footer (vbmeta_vendor_ab partition size: 0, vbmeta_vendor_ab image size: 4096).
+[2026-09-23 01:27:17:716:716356  wkbmq8pfbeaejbo7]:info2:Sending 'vbmeta_vendor_ab' (4 KB)                  OKAY [  0.038s]
+[2026-09-23 01:27:17:717:717356  wkbmq8pfbeaejbo7]:info2:Writing 'vbmeta_vendor_ab'                         (bootloader) Partition vbmeta_vendor_a flashed successfully
+[2026-09-23 01:27:17:718:718356  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition vbmeta_vendor_b flashed successfully
+[2026-09-23 01:27:17:718:718356  wkbmq8pfbeaejbo7]:info2:OKAY [  0.002s]
+[2026-09-23 01:27:17:719:719357  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.044s
+[2026-09-23 01:27:17:723:723357  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash md1img_ab   		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\md1img.img     			  || 
+[2026-09-23 01:27:17:751:751364  wkbmq8pfbeaejbo7]:info2:Warning: skip copying md1img_ab image avb footer (md1img_ab partition size: 0, md1img_ab image size: 66546320).
+[2026-09-23 01:27:19:329:329718  wkbmq8pfbeaejbo7]:info2:Sending 'md1img_ab' (64986 KB)                     OKAY [  1.579s]
+[2026-09-23 01:27:19:838:838831  wkbmq8pfbeaejbo7]:info2:Writing 'md1img_ab'                                (bootloader) Partition md1img_a flashed successfully
+[2026-09-23 01:27:19:993:993866  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition md1img_b flashed successfully
+[2026-09-23 01:27:19:993:993866  wkbmq8pfbeaejbo7]:info2:OKAY [  0.663s]
+[2026-09-23 01:27:19:993:993866  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 2.247s
+[2026-09-23 01:27:19:997:997867  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash spmfw_ab   		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\spmfw.img      			  || 
+[2026-09-23 01:27:20:025:025873  wkbmq8pfbeaejbo7]:info2:Warning: skip copying spmfw_ab image avb footer (spmfw_ab partition size: 0, spmfw_ab image size: 13712).
+[2026-09-23 01:27:20:063:063881  wkbmq8pfbeaejbo7]:info2:Sending 'spmfw_ab' (13 KB)                         OKAY [  0.038s]
+[2026-09-23 01:27:20:065:065883  wkbmq8pfbeaejbo7]:info2:Writing 'spmfw_ab'                                 (bootloader) Partition spmfw_a flashed successfully
+[2026-09-23 01:27:20:066:066882  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition spmfw_b flashed successfully
+[2026-09-23 01:27:20:066:066882  wkbmq8pfbeaejbo7]:info2:OKAY [  0.003s]
+[2026-09-23 01:27:20:067:067883  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.045s
+[2026-09-23 01:27:20:070:070883  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash audio_dsp_ab 		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\audio_dsp.img  			  || 
+[2026-09-23 01:27:20:099:099890  wkbmq8pfbeaejbo7]:info2:Warning: skip copying audio_dsp_ab image avb footer (audio_dsp_ab partition size: 0, audio_dsp_ab image size: 3067040).
+[2026-09-23 01:27:20:202:202913  wkbmq8pfbeaejbo7]:info2:Sending 'audio_dsp_ab' (2995 KB)                   OKAY [  0.103s]
+[2026-09-23 01:27:20:248:248923  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash pi_img_ab    		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\pi_img.img     			  || 
+[2026-09-23 01:27:20:257:257925  wkbmq8pfbeaejbo7]:info2:Writing 'audio_dsp_ab'                             (bootloader) Partition audio_dsp_a flashed successfully
+[2026-09-23 01:27:20:257:257925  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition audio_dsp_b flashed successfully
+[2026-09-23 01:27:20:257:257925  wkbmq8pfbeaejbo7]:info2:OKAY [  0.041s]
+[2026-09-23 01:27:20:444:444967  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.149s
+[2026-09-23 01:27:20:458:458970  wkbmq8pfbeaejbo7]:info2:Warning: skip copying pi_img_ab image avb footer (pi_img_ab partition size: 0, pi_img_ab image size: 7024).
+[2026-09-23 01:27:20:495:495979  wkbmq8pfbeaejbo7]:info2:Sending 'pi_img_ab' (6 KB)                         OKAY [  0.038s]
+[2026-09-23 01:27:20:497:497979  wkbmq8pfbeaejbo7]:info2:Writing 'pi_img_ab'                                (bootloader) Partition pi_img_a flashed successfully
+[2026-09-23 01:27:20:498:498979  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition pi_img_b flashed successfully
+[2026-09-23 01:27:20:498:498979  wkbmq8pfbeaejbo7]:info2:OKAY [  0.002s]
+[2026-09-23 01:27:20:498:498979  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.045s
+[2026-09-23 01:27:20:502:502980  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash dpm_ab     		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\dpm.img        			  || 
+[2026-09-23 01:27:20:529:529986  wkbmq8pfbeaejbo7]:info2:Warning: skip copying dpm_ab image avb footer (dpm_ab partition size: 0, dpm_ab image size: 133888).
+[2026-09-23 01:27:20:566:566994  wkbmq8pfbeaejbo7]:info2:Sending 'dpm_ab' (130 KB)                          OKAY [  0.037s]
+[2026-09-23 01:27:20:568:568995  wkbmq8pfbeaejbo7]:info2:Writing 'dpm_ab'                                   (bootloader) Partition dpm_a flashed successfully
+[2026-09-23 01:27:20:570:570995  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition dpm_b flashed successfully
+[2026-09-23 01:27:20:570:570995  wkbmq8pfbeaejbo7]:info2:OKAY [  0.004s]
+[2026-09-23 01:27:20:570:570995  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.044s
+[2026-09-23 01:27:20:574:574996  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash scp_ab      		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\scp.img        			  || 
+[2026-09-23 01:27:20:602:602002  wkbmq8pfbeaejbo7]:info2:Warning: skip copying scp_ab image avb footer (scp_ab partition size: 0, scp_ab image size: 1801280).
+[2026-09-23 01:27:20:674:674018  wkbmq8pfbeaejbo7]:info2:Sending 'scp_ab' (1759 KB)                         OKAY [  0.072s]
+[2026-09-23 01:27:20:691:691022  wkbmq8pfbeaejbo7]:info2:Writing 'scp_ab'                                   (bootloader) Partition scp_a flashed successfully
+[2026-09-23 01:27:20:702:702024  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition scp_b flashed successfully
+[2026-09-23 01:27:20:702:702024  wkbmq8pfbeaejbo7]:info2:OKAY [  0.028s]
+[2026-09-23 01:27:20:702:702024  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.103s
+[2026-09-23 01:27:20:706:706026  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash sspm_ab    		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\sspm.img       			  || 
+[2026-09-23 01:27:20:740:740033  wkbmq8pfbeaejbo7]:info2:Warning: skip copying sspm_ab image avb footer (sspm_ab partition size: 0, sspm_ab image size: 750624).
+[2026-09-23 01:27:20:787:787043  wkbmq8pfbeaejbo7]:info2:Sending 'sspm_ab' (733 KB)                         OKAY [  0.047s]
+[2026-09-23 01:27:20:795:795045  wkbmq8pfbeaejbo7]:info2:Writing 'sspm_ab'                                  (bootloader) Partition sspm_a flashed successfully
+[2026-09-23 01:27:20:801:801046  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition sspm_b flashed successfully
+[2026-09-23 01:27:20:801:801046  wkbmq8pfbeaejbo7]:info2:OKAY [  0.014s]
+[2026-09-23 01:27:20:802:802047  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.065s
+[2026-09-23 01:27:20:806:806047  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash mcupm_ab			C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\mcupm.img      			  || 
+[2026-09-23 01:27:20:833:833055  wkbmq8pfbeaejbo7]:info2:Warning: skip copying mcupm_ab image avb footer (mcupm_ab partition size: 0, mcupm_ab image size: 357008).
+[2026-09-23 01:27:20:872:872062  wkbmq8pfbeaejbo7]:info2:Sending 'mcupm_ab' (348 KB)                        OKAY [  0.039s]
+[2026-09-23 01:27:20:876:876063  wkbmq8pfbeaejbo7]:info2:Writing 'mcupm_ab'                                 (bootloader) Partition mcupm_a flashed successfully
+[2026-09-23 01:27:20:881:881065  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition mcupm_b flashed successfully
+[2026-09-23 01:27:20:881:881065  wkbmq8pfbeaejbo7]:info2:OKAY [  0.009s]
+[2026-09-23 01:27:20:881:881065  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.051s
+[2026-09-23 01:27:20:885:885065  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash cam_vpu1_ab  		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu1.img   			  || 
+[2026-09-23 01:27:20:913:913072  wkbmq8pfbeaejbo7]:info2:Warning: skip copying cam_vpu1_ab image avb footer (cam_vpu1_ab partition size: 0, cam_vpu1_ab image size: 6446960).
+[2026-09-23 01:27:21:109:109116  wkbmq8pfbeaejbo7]:info2:Sending 'cam_vpu1_ab' (6295 KB)                    OKAY [  0.195s]
+[2026-09-23 01:27:21:173:173130  wkbmq8pfbeaejbo7]:info2:Writing 'cam_vpu1_ab'                              (bootloader) Partition cam_vpu1_a flashed successfully
+[2026-09-23 01:27:21:200:200136  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition cam_vpu1_b flashed successfully
+[2026-09-23 01:27:21:202:202136  wkbmq8pfbeaejbo7]:info2:OKAY [  0.093s]
+[2026-09-23 01:27:21:202:202136  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.292s
+[2026-09-23 01:27:21:207:207138  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash cam_vpu2_ab 		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu2.img  			  || 
+[2026-09-23 01:27:21:417:417184  wkbmq8pfbeaejbo7]:info2:Warning: skip copying cam_vpu2_ab image avb footer (cam_vpu2_ab partition size: 0, cam_vpu2_ab image size: 11706080).
+[2026-09-23 01:27:21:739:739257  wkbmq8pfbeaejbo7]:info2:Sending 'cam_vpu2_ab' (11431 KB)                   OKAY [  0.321s]
+[2026-09-23 01:27:21:856:856283  wkbmq8pfbeaejbo7]:info2:Writing 'cam_vpu2_ab'                              (bootloader) Partition cam_vpu2_a flashed successfully
+[2026-09-23 01:27:21:909:909294  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition cam_vpu2_b flashed successfully
+[2026-09-23 01:27:21:910:910295  wkbmq8pfbeaejbo7]:info2:OKAY [  0.171s]
+[2026-09-23 01:27:21:911:911295  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.497s
+[2026-09-23 01:27:21:915:915296  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash cam_vpu3_ab  		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cam_vpu3.img   			  || 
+[2026-09-23 01:27:21:945:945303  wkbmq8pfbeaejbo7]:info2:Warning: skip copying cam_vpu3_ab image avb footer (cam_vpu3_ab partition size: 0, cam_vpu3_ab image size: 4320).
+[2026-09-23 01:27:21:982:982311  wkbmq8pfbeaejbo7]:info2:Sending 'cam_vpu3_ab' (4 KB)                       OKAY [  0.037s]
+[2026-09-23 01:27:21:984:984311  wkbmq8pfbeaejbo7]:info2:Writing 'cam_vpu3_ab'                              (bootloader) Partition cam_vpu3_a flashed successfully
+[2026-09-23 01:27:21:985:985311  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition cam_vpu3_b flashed successfully
+[2026-09-23 01:27:21:990:990313  wkbmq8pfbeaejbo7]:info2:OKAY [  0.008s]
+[2026-09-23 01:27:21:990:990313  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.048s
+[2026-09-23 01:27:21:996:996314  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash gz_ab       		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\gz.img         			  || 
+[2026-09-23 01:27:22:027:027321  wkbmq8pfbeaejbo7]:info2:Warning: skip copying gz_ab image avb footer (gz_ab partition size: 0, gz_ab image size: 3817440).
+[2026-09-23 01:27:22:146:146348  wkbmq8pfbeaejbo7]:info2:Sending 'gz_ab' (3727 KB)                          OKAY [  0.118s]
+[2026-09-23 01:27:22:184:184357  wkbmq8pfbeaejbo7]:info2:Writing 'gz_ab'                                    (bootloader) Partition gz_a flashed successfully
+[2026-09-23 01:27:22:204:204362  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition gz_b flashed successfully
+[2026-09-23 01:27:22:205:205361  wkbmq8pfbeaejbo7]:info2:OKAY [  0.059s]
+[2026-09-23 01:27:22:205:205361  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.181s
+[2026-09-23 01:27:22:209:209362  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash lk_ab       		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\lk.img         			  || 
+[2026-09-23 01:27:22:239:239368  wkbmq8pfbeaejbo7]:info2:Warning: skip copying lk_ab image avb footer (lk_ab partition size: 0, lk_ab image size: 1813872).
+[2026-09-23 01:27:22:311:311385  wkbmq8pfbeaejbo7]:info2:Sending 'lk_ab' (1771 KB)                          OKAY [  0.072s]
+[2026-09-23 01:27:22:344:344392  wkbmq8pfbeaejbo7]:info2:Writing 'lk_ab'                                    (bootloader) Partition lk_a flashed successfully
+[2026-09-23 01:27:22:350:350394  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition lk_b flashed successfully
+[2026-09-23 01:27:22:350:350394  wkbmq8pfbeaejbo7]:info2:OKAY [  0.039s]
+[2026-09-23 01:27:22:351:351394  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.114s
+[2026-09-23 01:27:22:355:355394  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash boot_ab     		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\boot.img         		  || 
+[2026-09-23 01:27:22:386:386402  wkbmq8pfbeaejbo7]:info2:Warning: skip copying boot_ab image avb footer (boot_ab partition size: 0, boot_ab image size: 134217728).
+[2026-09-23 01:27:25:553:553892  wkbmq8pfbeaejbo7]:info2:Sending 'boot_ab' (131072 KB)                      OKAY [  3.167s]
+[2026-09-23 01:27:26:369:369074  wkbmq8pfbeaejbo7]:info2:Writing 'boot_ab'                                  (bootloader) Partition boot_a flashed successfully
+[2026-09-23 01:27:26:685:685481  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition boot_b flashed successfully
+[2026-09-23 01:27:26:685:685481  wkbmq8pfbeaejbo7]:info2:OKAY [  1.132s]
+[2026-09-23 01:27:26:685:685481  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 4.302s
+[2026-09-23 01:27:26:690:690482  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash dtbo_ab      		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\dtbo.img       			  || 
+[2026-09-23 01:27:26:718:718488  wkbmq8pfbeaejbo7]:info2:Warning: skip copying dtbo_ab image avb footer (dtbo_ab partition size: 0, dtbo_ab image size: 33554432).
+[2026-09-23 01:27:27:517:517669  wkbmq8pfbeaejbo7]:info2:Sending 'dtbo_ab' (32768 KB)                       OKAY [  0.799s]
+[2026-09-23 01:27:27:752:752720  wkbmq8pfbeaejbo7]:info2:Writing 'dtbo_ab'                                  (bootloader) Partition dtbo_a flashed successfully
+[2026-09-23 01:27:27:836:836738  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition dtbo_b flashed successfully
+[2026-09-23 01:27:27:836:836738  wkbmq8pfbeaejbo7]:info2:OKAY [  0.319s]
+[2026-09-23 01:27:27:837:837739  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 1.122s
+[2026-09-23 01:27:27:841:841740  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash tee_ab      		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\tee.img        			  || 
+[2026-09-23 01:27:27:870:870747  wkbmq8pfbeaejbo7]:info2:Warning: skip copying tee_ab image avb footer (tee_ab partition size: 0, tee_ab image size: 2637024).
+[2026-09-23 01:27:27:961:961767  wkbmq8pfbeaejbo7]:info2:Sending 'tee_ab' (2575 KB)                         OKAY [  0.091s]
+[2026-09-23 01:27:27:981:981772  wkbmq8pfbeaejbo7]:info2:Writing 'tee_ab'                                   (bootloader) Partition tee_a flashed successfully
+[2026-09-23 01:27:27:990:990773  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition tee_b flashed successfully
+[2026-09-23 01:27:27:990:990773  wkbmq8pfbeaejbo7]:info2:OKAY [  0.029s]
+[2026-09-23 01:27:27:990:990773  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.123s
+[2026-09-23 01:27:27:994:994774  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash mitee_ab   		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\mitee.img        		  || 
+[2026-09-23 01:27:28:023:023781  wkbmq8pfbeaejbo7]:info2:Warning: skip copying mitee_ab image avb footer (mitee_ab partition size: 0, mitee_ab image size: 2595552).
+[2026-09-23 01:27:28:113:113801  wkbmq8pfbeaejbo7]:info2:Sending 'mitee_ab' (2534 KB)                       OKAY [  0.090s]
+[2026-09-23 01:27:28:135:135807  wkbmq8pfbeaejbo7]:info2:Writing 'mitee_ab'                                 (bootloader) Partition mitee_a flashed successfully
+[2026-09-23 01:27:28:148:148809  wkbmq8pfbeaejbo7]:info2:(bootloader) Partition mitee_b flashed successfully
+[2026-09-23 01:27:28:148:148809  wkbmq8pfbeaejbo7]:info2:OKAY [  0.035s]
+[2026-09-23 01:27:28:148:148809  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.129s
+[2026-09-23 01:27:28:156:156810  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash logo      		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\logo.bin       			  || 
+[2026-09-23 01:27:28:263:263834  wkbmq8pfbeaejbo7]:info2:Sending 'logo' (1207 KB)                           OKAY [  0.058s]
+[2026-09-23 01:27:28:272:272836  wkbmq8pfbeaejbo7]:info2:Writing 'logo'                                     OKAY [  0.010s]
+[2026-09-23 01:27:28:280:280838  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash super            	C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\super.img            	  || 
+[2026-09-23 01:27:28:581:581906  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.083s
+[2026-09-23 01:27:37:380:380528  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 1/34 (262141 KB)            OKAY [  6.926s]
+[2026-09-23 01:27:39:850:850637  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.470s]
+[2026-09-23 01:27:46:348:348502  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 2/34 (261236 KB)            OKAY [  6.497s]
+[2026-09-23 01:27:49:374:374669  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  3.026s]
+[2026-09-23 01:27:55:921:921119  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 3/34 (261602 KB)            OKAY [  6.545s]
+[2026-09-23 01:27:58:774:774758  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.854s]
+[2026-09-23 01:28:05:234:234203  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 4/34 (261343 KB)            OKAY [  6.458s]
+[2026-09-23 01:28:07:798:798777  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.564s]
+[2026-09-23 01:28:14:349:349764  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 5/34 (262072 KB)            OKAY [  6.551s]
+[2026-09-23 01:28:16:247:247967  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  1.898s]
+[2026-09-23 01:28:22:970:970312  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 6/34 (261669 KB)            OKAY [  6.701s]
+[2026-09-23 01:28:25:234:234894  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.265s]
+[2026-09-23 01:28:31:749:749931  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 7/34 (260523 KB)            OKAY [  6.512s]
+[2026-09-23 01:28:34:465:465539  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.715s]
+[2026-09-23 01:28:41:063:063595  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 8/34 (261463 KB)            OKAY [  6.597s]
+[2026-09-23 01:28:43:571:571314  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.507s]
+[2026-09-23 01:28:50:078:078234  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 9/34 (261678 KB)            OKAY [  6.506s]
+[2026-09-23 01:28:52:445:445765  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.367s]
+[2026-09-23 01:28:59:084:084250  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 10/34 (261647 KB)           OKAY [  6.637s]
+[2026-09-23 01:29:01:439:439707  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.355s]
+[2026-09-23 01:29:08:042:042779  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 11/34 (261421 KB)           OKAY [  6.599s]
+[2026-09-23 01:29:10:789:789687  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.746s]
+[2026-09-23 01:29:17:368:368205  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 12/34 (260083 KB)           OKAY [  6.571s]
+[2026-09-23 01:29:20:538:538915  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  3.171s]
+[2026-09-23 01:29:27:077:077081  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 13/34 (261383 KB)           OKAY [  6.537s]
+[2026-09-23 01:29:29:639:639320  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.562s]
+[2026-09-23 01:29:36:106:106326  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 14/34 (261407 KB)           OKAY [  6.465s]
+[2026-09-23 01:29:38:389:389837  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.284s]
+[2026-09-23 01:29:45:157:157573  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 15/34 (260425 KB)           OKAY [  6.766s]
+[2026-09-23 01:29:47:808:808165  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.650s]
+[2026-09-23 01:29:54:531:531870  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 16/34 (261638 KB)           OKAY [  6.723s]
+[2026-09-23 01:29:56:801:801247  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.270s]
+[2026-09-23 01:30:03:400:400634  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 17/34 (256459 KB)           OKAY [  6.594s]
+[2026-09-23 01:30:07:195:195387  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  3.795s]
+[2026-09-23 01:30:13:638:638474  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 18/34 (257984 KB)           OKAY [  6.442s]
+[2026-09-23 01:30:15:584:584910  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  1.947s]
+[2026-09-23 01:30:22:189:189939  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 19/34 (254020 KB)           OKAY [  6.604s]
+[2026-09-23 01:30:24:391:391215  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.201s]
+[2026-09-23 01:30:31:198:198620  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 20/34 (259266 KB)           OKAY [  6.794s]
+[2026-09-23 01:30:36:729:729812  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  5.531s]
+[2026-09-23 01:30:42:567:567027  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 21/34 (234412 KB)           OKAY [  5.837s]
+[2026-09-23 01:30:44:695:695008  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.128s]
+[2026-09-23 01:30:51:826:826397  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 22/34 (256541 KB)           OKAY [  7.130s]
+[2026-09-23 01:30:54:337:337798  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.511s]
+[2026-09-23 01:30:59:926:926049  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 23/34 (229604 KB)           OKAY [  5.588s]
+[2026-09-23 01:31:01:920:920495  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  1.994s]
+[2026-09-23 01:31:08:342:342826  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 24/34 (262040 KB)           OKAY [  6.422s]
+[2026-09-23 01:31:10:521:521590  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.179s]
+[2026-09-23 01:31:17:142:142753  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 25/34 (260437 KB)           OKAY [  6.618s]
+[2026-09-23 01:31:20:299:299036  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  3.156s]
+[2026-09-23 01:31:26:980:980090  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 26/34 (262142 KB)           OKAY [  6.678s]
+[2026-09-23 01:31:30:141:141941  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  3.162s]
+[2026-09-23 01:31:36:722:722397  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 27/34 (262140 KB)           OKAY [  6.580s]
+[2026-09-23 01:31:38:606:606583  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  1.884s]
+[2026-09-23 01:31:45:251:251060  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 28/34 (262140 KB)           OKAY [  6.644s]
+[2026-09-23 01:31:47:303:303057  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.052s]
+[2026-09-23 01:31:53:147:147644  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 29/34 (234784 KB)           OKAY [  5.844s]
+[2026-09-23 01:31:55:250:250104  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.102s]
+[2026-09-23 01:32:01:894:894932  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 30/34 (254512 KB)           OKAY [  6.644s]
+[2026-09-23 01:32:04:717:717646  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.822s]
+[2026-09-23 01:32:11:277:277468  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 31/34 (261068 KB)           OKAY [  6.559s]
+[2026-09-23 01:32:13:295:295129  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.018s]
+[2026-09-23 01:32:19:732:732762  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 32/34 (261777 KB)           OKAY [  6.436s]
+[2026-09-23 01:32:22:266:266853  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.534s]
+[2026-09-23 01:32:28:637:637971  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 33/34 (259916 KB)           OKAY [  6.371s]
+[2026-09-23 01:32:31:281:281696  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  2.643s]
+[2026-09-23 01:32:33:345:345102  wkbmq8pfbeaejbo7]:info2:Sending sparse 'super' 34/34 (82984 KB)            OKAY [  2.063s]
+[2026-09-23 01:32:34:200:200110  wkbmq8pfbeaejbo7]:info2:Writing 'super'                                    OKAY [  0.854s]
+[2026-09-23 01:32:34:200:200110  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 305.505s
+[2026-09-23 01:32:34:209:209223  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash rescue         	C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\rescue.img        		  || 
+[2026-09-23 01:32:34:246:246231  wkbmq8pfbeaejbo7]:info2:Warning: skip copying rescue image avb footer due to sparse image.
+[2026-09-23 01:32:34:282:282241  wkbmq8pfbeaejbo7]:info2:Sending 'rescue' (40 KB)                           OKAY [  0.037s]
+[2026-09-23 01:32:34:334:334251  wkbmq8pfbeaejbo7]:info2:Writing 'rescue'                                   OKAY [  0.051s]
+[2026-09-23 01:32:34:334:334251  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.091s
+[2026-09-23 01:32:34:339:339252  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash cust         		C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\cust.img        		  || 
+[2026-09-23 01:32:34:371:371259  wkbmq8pfbeaejbo7]:info2:Warning: skip copying cust image avb footer due to sparse image.
+[2026-09-23 01:32:38:976:976790  wkbmq8pfbeaejbo7]:info2:Sending 'cust' (182748 KB)                         OKAY [  4.606s]
+[2026-09-23 01:32:40:879:879684  wkbmq8pfbeaejbo7]:info2:Writing 'cust'                                     OKAY [  1.903s]
+[2026-09-23 01:32:40:880:880684  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 6.513s
+[2026-09-23 01:32:40:884:884685  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename flash userdata         	C:\Users\Yusuf\Desktop\ares_in_global_images_V14.0.5.0.TKJINXM_13.0\images\userdata.img        	  || 
+[2026-09-23 01:32:40:917:917692  wkbmq8pfbeaejbo7]:info2:Warning: skip copying userdata image avb footer due to sparse image.
+[2026-09-23 01:32:41:145:145445  wkbmq8pfbeaejbo7]:info2:Sending 'userdata' (8236 KB)                       OKAY [  0.228s]
+[2026-09-23 01:32:41:784:784947  wkbmq8pfbeaejbo7]:info2:Writing 'userdata'                                 OKAY [  0.639s]
+[2026-09-23 01:32:41:785:785948  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.873s
+[2026-09-23 01:32:41:789:789948  wkbmq8pfbeaejbo7]:info1:"Now Flash Finished ......"
+[2026-09-23 01:32:41:789:789948  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename oem cdms 
+[2026-09-23 01:32:41:815:815954  wkbmq8pfbeaejbo7]:info2:OKAY [  0.002s]
+[2026-09-23 01:32:41:815:815954  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.002s
+[2026-09-23 01:32:41:821:821956  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename set_active a   || 
+[2026-09-23 01:32:41:854:854963  wkbmq8pfbeaejbo7]:info2:Setting current slot to 'a'                        OKAY [  0.001s]
+[2026-09-23 01:32:41:854:854963  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.001s
+[2026-09-23 01:32:41:872:872968  wkbmq8pfbeaejbo7]:info1:"Now Reboot ......"
+[2026-09-23 01:32:41:875:875968  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename reboot   || 
+[2026-09-23 01:32:41:917:917977  wkbmq8pfbeaejbo7]:info2:Rebooting                                          OKAY [  0.000s]
+[2026-09-23 01:32:41:918:918977  wkbmq8pfbeaejbo7]:info2:Finished. Total time: 0.000s
+[2026-09-23 01:32:41:933:933982  wkbmq8pfbeaejbo7]:begin FlashDone
+[2026-09-23 01:32:41:933:933982  wkbmq8pfbeaejbo7]:errMsg is null
+[2026-09-23 01:32:41:934:934981  wkbmq8pfbeaejbo7]:no need checkPoint
+[2026-09-23 01:32:41:934:934981  wkbmq8pfbeaejbo7]:flash done
+[2026-09-23 01:32:41:934:934981  wkbmq8pfbeaejbo7]:process exit.
+[2026-09-23 01:32:42:811:811940  wkbmq8pfbeaejbo7]:flashSuccess True
+[2026-09-23 01:32:42:812:812807  wkbmq8pfbeaejbo7]:isFactory False CheckCPUID False
+[2026-09-23 01:32:42:812:812807  wkbmq8pfbeaejbo7]:before:flashSuccess is True set IsUpdate:True set IsDone True
+[2026-09-23 01:32:42:812:812807  wkbmq8pfbeaejbo7]:after:flashSuccess is True set IsUpdate:false set IsDone true

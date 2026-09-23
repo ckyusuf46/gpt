@@ -1,0 +1,15 @@
+[2026-04-28 09:54:19:681:681434]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-28 09:54:19:974:974134]:ls ubs :
+
+
+[2026-04-28 09:54:20:443:443917]:add device LJ546L000097 index 1
+[2026-04-28 09:54:21:959:959652]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-28 09:54:22:171:171752]:ls ubs :
+
+
+[2026-04-28 09:54:22:453:453700]:FlashingDevice.flashDeviceList.Remove LJ546L000097
+[2026-04-28 09:54:22:506:506221]:add device LJ546L000097 index 1
+[2026-04-28 09:54:22:559:559004]:dl not exit ffufilelist
+[2026-04-28 09:54:22:649:649736]:Thread start,thread id 7,thread name LJ546L000097
+[2026-04-28 09:54:22:732:732761]:start process id 16580 name cmd
+[2026-04-28 10:01:16:721:721136]:Thread stopped, thread id 7, thread name LJ546L000097

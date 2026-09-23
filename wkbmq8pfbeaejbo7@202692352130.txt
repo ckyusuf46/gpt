@@ -1,0 +1,40 @@
+[2026-09-23 05:21:30:565:565533  wkbmq8pfbeaejbo7]:MiFlash 2025-07-20-0
+[2026-09-23 05:21:30:566:566533  wkbmq8pfbeaejbo7]:device wkbmq8pfbeaejbo7 自动化刷机 
+[2026-09-23 05:21:30:566:566533  wkbmq8pfbeaejbo7]:Thread id:25 Thread name:
+[2026-09-23 05:21:30:567:567533  wkbmq8pfbeaejbo7]:image path:C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0
+[2026-09-23 05:21:30:567:567533  wkbmq8pfbeaejbo7]:env android path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Google\Android"
+[2026-09-23 05:21:30:567:567533  wkbmq8pfbeaejbo7]:script :C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0\flash_all.bat
+[2026-09-23 05:21:30:585:585537  wkbmq8pfbeaejbo7]:Physical Memory Usage:3358720 Byte
+[2026-09-23 05:21:30:586:586537  wkbmq8pfbeaejbo7]:start process id 35628 name cmd
+[2026-09-23 05:21:30:631:631547  wkbmq8pfbeaejbo7]:info1:$if exist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) ) 
+[2026-09-23 05:21:30:632:632547  wkbmq8pfbeaejbo7]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[2026-09-23 05:21:30:632:632547  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[2026-09-23 05:21:30:632:632547  wkbmq8pfbeaejbo7]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2026-09-23 05:21:30:790:790089  wkbmq8pfbeaejbo7]:info1:$(set version=1 ) 
+[2026-09-23 05:21:30:793:793595  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set version=0 
+[2026-09-23 05:21:30:794:794596  wkbmq8pfbeaejbo7]:info1:$set anticheck="antirollback check pass" 
+[2026-09-23 05:21:30:795:795596  wkbmq8pfbeaejbo7]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2026-09-23 05:21:30:795:795596  wkbmq8pfbeaejbo7]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[2026-09-23 05:21:30:832:832604  wkbmq8pfbeaejbo7]:info1:"antirollback check pass" 
+[2026-09-23 05:21:30:856:856611  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar product   2>&1  | findstr "ares"   || 
+[2026-09-23 05:21:30:900:900620  wkbmq8pfbeaejbo7]:info1:product: ares
+[2026-09-23 05:21:30:904:904620  wkbmq8pfbeaejbo7]:info1:"Now Check Finished ......"
+[2026-09-23 05:21:30:905:905621  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[2026-09-23 05:21:30:905:905621  wkbmq8pfbeaejbo7]:info1:fastboot -s devicename flash crclist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0\images\crclist.txt   ||  
+[2026-09-23 05:21:30:906:906621  wkbmq8pfbeaejbo7]:info1: fastboot -s devicename flash sparsecrclist C:\Users\Yusuf\Desktop\ares_images_V14.0.4.0.TKJCNXM_20230710.0000.00_13.0_cn_932146031f\ares_images_V14.0.4.0.TKJCNXM_13.0\images\sparsecrclist.txt   || 
+[2026-09-23 05:21:30:906:906621  wkbmq8pfbeaejbo7]:info1:) 
+[2026-09-23 05:21:30:938:938628  wkbmq8pfbeaejbo7]:info1:crc: 1
+[2026-09-23 05:21:30:973:973635  wkbmq8pfbeaejbo7]:info2:Warning: skip copying crclist image avb footer (crclist partition size: 0, crclist image size: 442).
+[2026-09-23 05:21:31:011:011732  wkbmq8pfbeaejbo7]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.038s]
+[2026-09-23 05:21:31:012:012644  wkbmq8pfbeaejbo7]:info2:Writing 'crclist'                                  FAILED (remote: 'not allowed in locked state')
+[2026-09-23 05:21:31:012:012644  wkbmq8pfbeaejbo7]:info2:fastboot: error: Command failed
+[2026-09-23 05:21:31:013:013645  wkbmq8pfbeaejbo7]:info2:fastboot: error: Command failed
+[2026-09-23 05:21:31:017:017645  wkbmq8pfbeaejbo7]:info1:"Flash crclist error" 
+[2026-09-23 05:21:31:018:018645  wkbmq8pfbeaejbo7]:info1:"Flash crclist error" 
+[2026-09-23 05:21:31:022:022647  wkbmq8pfbeaejbo7]:begin FlashDone
+[2026-09-23 05:21:31:023:023646  wkbmq8pfbeaejbo7]:error:fastboot: error: Command failed
+[2026-09-23 05:21:31:023:023646  wkbmq8pfbeaejbo7]:process exit.
+[2026-09-23 05:21:31:139:139673  wkbmq8pfbeaejbo7]:flashSuccess False
+[2026-09-23 05:21:31:139:139673  wkbmq8pfbeaejbo7]:isFactory False CheckCPUID False
+[2026-09-23 05:21:31:140:140674  wkbmq8pfbeaejbo7]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2026-09-23 05:21:31:140:140674  wkbmq8pfbeaejbo7]:after:flashSuccess is False set IsUpdate:false set IsDone true

@@ -1,0 +1,67 @@
+[18:20:39]:open RegistryKey Software\XiaoMi\MiFlash\
+[18:20:39]:create RegistryKey Software\XiaoMi\MiFlash\
+[2026-09-22 18:29:41:219:219897]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 18:29:43:140:140061]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 18:29:54:251:251873]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 18:29:54:450:450647]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 18:29:57:931:931889]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 18:29:58:121:121933]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 18:29:58:128:128932]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 18:30:32:044:044532]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 18:30:32:239:239575]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 18:30:32:241:241576]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 18:30:32:248:248577]:dl not exit ffufilelist
+[2026-09-22 18:30:32:253:253579]:Thread start,thread id 6,thread name wkbmq8pfbeaejbo7
+[2026-09-22 18:30:32:270:270583]:start process id 18480 name cmd
+[2026-09-22 18:40:16:346:346743]:Thread stopped, thread id 6, thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:02:35:368:368257]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:02:35:565:565300]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:02:46:400:400792]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:02:46:582:582833]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:02:52:159:159731]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:02:52:360:360096]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:02:52:361:361078]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:02:52:368:368079]:Thread start,thread id 4,thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:02:52:583:583483]:Thread stopped, thread id 4, thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:03:56:849:849252]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:03:57:040:040017]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:03:57:043:043017]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:03:57:775:775194]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:03:57:964:964140]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:03:57:966:966141]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:03:57:972:972143]:dl not exit ffufilelist
+[2026-09-22 19:03:57:973:973142]:Thread start,thread id 11,thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:03:57:987:987146]:start process id 19156 name cmd
+[2026-09-22 19:03:58:577:577815]:Thread stopped, thread id 11, thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:04:36:266:266929]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:04:36:515:515708]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:04:36:518:518709]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:04:37:127:127659]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:04:37:410:410241]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:04:37:413:413241]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:04:37:419:419242]:dl not exit ffufilelist
+[2026-09-22 19:04:37:420:420242]:Thread start,thread id 15,thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:04:37:432:432245]:start process id 25720 name cmd
+[2026-09-22 19:10:39:653:653692]:Thread stopped, thread id 15, thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:26:16:494:494903]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:26:16:710:710056]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:26:16:711:711057]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:26:26:518:518780]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:26:26:699:699821]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:26:26:701:701821]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:47:33:029:029530]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:47:33:538:538306]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:47:33:540:540307]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:48:31:334:334712]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:48:31:778:778458]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:48:31:781:781378]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:48:34:683:683981]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 19:48:35:055:055612]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 19:48:35:057:057612]:add device wkbmq8pfbeaejbo7 index 1
+[2026-09-22 19:48:35:066:066614]:dl not exit ffufilelist
+[2026-09-22 19:48:35:071:071615]:Thread start,thread id 10,thread name wkbmq8pfbeaejbo7
+[2026-09-22 19:48:35:097:097622]:start process id 25568 name cmd
+[2026-09-22 19:55:05:704:704089]:Thread stopped, thread id 10, thread name wkbmq8pfbeaejbo7
+[2026-09-22 20:24:16:018:018528]:lsusb path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-09-22 20:24:16:255:255654]:FlashingDevice.flashDeviceList.Remove wkbmq8pfbeaejbo7
+[2026-09-22 20:24:16:258:258653]:add device wkbmq8pfbeaejbo7 index 1

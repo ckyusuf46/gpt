@@ -1,0 +1,249 @@
+[2026-04-28 09:54:22:640:640455  LJ546L000097]:MiFlash 2025-07-20-0
+[2026-04-28 09:54:22:657:657136  LJ546L000097]:Thread id:8 Thread name:
+[2026-04-28 09:54:22:664:664314  LJ546L000097]:image path:D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0
+[2026-04-28 09:54:22:665:665317  LJ546L000097]:env android path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Google\Android"
+[2026-04-28 09:54:22:665:665936  LJ546L000097]:script :D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\flash_all_lock.bat
+[2026-04-28 09:54:22:729:729382  LJ546L000097]:Physical Memory Usage:4255744 Byte
+[2026-04-28 09:54:22:730:730385  LJ546L000097]:start process id 16580 name cmd
+[2026-04-28 09:54:22:802:802791  LJ546L000097]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *somalia"   || echo Missmatching image and device 
+[2026-04-28 09:54:22:920:920337  LJ546L000097]:info1:product: somalia
+[2026-04-28 09:54:22:928:928342  LJ546L000097]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *somalia"   || exit /B 1 
+[2026-04-28 09:54:23:002:002075  LJ546L000097]:info1:product: somalia
+[2026-04-28 09:54:23:009:009958  LJ546L000097]:info1:$set CURRENT_ANTI_VER=1 
+[2026-04-28 09:54:23:011:011735  LJ546L000097]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2026-04-28 09:54:23:139:139740  LJ546L000097]:info1:$(set version=1 ) 
+[2026-04-28 09:54:23:140:140342  LJ546L000097]:info1:$if [1] EQU [] set version=0 
+[2026-04-28 09:54:23:142:142377  LJ546L000097]:info1:$if 1 GTR 1 (
+[2026-04-28 09:54:23:143:143800  LJ546L000097]:info1: 
+[2026-04-28 09:54:23:146:146077  LJ546L000097]:info1: exit /B 1 
+[2026-04-28 09:54:23:149:149307  LJ546L000097]:info1:) 
+[2026-04-28 09:54:23:150:150322  LJ546L000097]:info1:$fastboot -s devicename erase boot_ab   || 
+[2026-04-28 09:54:23:208:208607  LJ546L000097]:info2:Erasing 'boot_ab'                                  OKAY [  0.013s]
+[2026-04-28 09:54:23:209:209138  LJ546L000097]:info2:Finished. Total time: 0.014s
+[2026-04-28 09:54:23:214:214093  LJ546L000097]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[2026-04-28 09:54:23:215:215776  LJ546L000097]:info1:fastboot -s devicename flash crclist D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\crclist.txt   ||  
+[2026-04-28 09:54:23:217:217971  LJ546L000097]:info1: fastboot -s devicename flash sparsecrclist D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\sparsecrclist.txt   || 
+[2026-04-28 09:54:23:219:219805  LJ546L000097]:info1:) 
+[2026-04-28 09:54:23:294:294887  LJ546L000097]:info1:crc: 1
+[2026-04-28 09:54:23:358:358397  LJ546L000097]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.001s]
+[2026-04-28 09:54:23:362:362505  LJ546L000097]:info2:Writing 'crclist'                                  OKAY [  0.004s]
+[2026-04-28 09:54:23:363:363778  LJ546L000097]:info2:Finished. Total time: 0.009s
+[2026-04-28 09:54:23:421:421512  LJ546L000097]:info2:Sending 'sparsecrclist' (0 KB)                     OKAY [  0.001s]
+[2026-04-28 09:54:23:440:440328  LJ546L000097]:info2:Writing 'sparsecrclist'                            OKAY [  0.018s]
+[2026-04-28 09:54:23:441:441330  LJ546L000097]:info2:Finished. Total time: 0.022s
+[2026-04-28 09:54:23:449:449407  LJ546L000097]:info1:$fastboot -s devicename erase misc   || 
+[2026-04-28 09:54:23:508:508873  LJ546L000097]:info2:Erasing 'misc'                                     OKAY [  0.005s]
+[2026-04-28 09:54:23:509:509870  LJ546L000097]:info2:Finished. Total time: 0.006s
+[2026-04-28 09:54:23:515:515635  LJ546L000097]:info1:$fastboot -s devicename erase uboot_log   || 
+[2026-04-28 09:54:23:598:598867  LJ546L000097]:info2:Erasing 'uboot_log'                                OKAY [  0.025s]
+[2026-04-28 09:54:23:600:600328  LJ546L000097]:info2:Finished. Total time: 0.026s
+[2026-04-28 09:54:23:605:605343  LJ546L000097]:info1:$fastboot -s devicename erase metadata   || 
+[2026-04-28 09:54:23:666:666132  LJ546L000097]:info2:Erasing 'metadata'                                 OKAY [  0.008s]
+[2026-04-28 09:54:23:667:667429  LJ546L000097]:info2:Finished. Total time: 0.009s
+[2026-04-28 09:54:23:671:671912  LJ546L000097]:info1:$fastboot -s devicename erase sysdumpdb   || 
+[2026-04-28 09:54:23:733:733165  LJ546L000097]:info2:Erasing 'sysdumpdb'                                OKAY [  0.008s]
+[2026-04-28 09:54:23:734:734182  LJ546L000097]:info2:Finished. Total time: 0.009s
+[2026-04-28 09:54:23:738:738636  LJ546L000097]:info1:$fastboot -s devicename erase opconfig   || 
+[2026-04-28 09:54:23:800:800482  LJ546L000097]:info2:Erasing 'opconfig'                                 OKAY [  0.006s]
+[2026-04-28 09:54:23:801:801483  LJ546L000097]:info2:Finished. Total time: 0.007s
+[2026-04-28 09:54:23:806:806694  LJ546L000097]:info1:$fastboot -s devicename flash splloader D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\u-boot-spl-16k-merge-sign.bin   || 
+[2026-04-28 09:54:23:871:871847  LJ546L000097]:info2:Sending 'splloader' (246 KB)                       OKAY [  0.009s]
+[2026-04-28 09:54:23:900:900801  LJ546L000097]:info2:Writing 'splloader'                                OKAY [  0.030s]
+[2026-04-28 09:54:23:902:902180  LJ546L000097]:info2:Finished. Total time: 0.041s
+[2026-04-28 09:54:23:910:910512  LJ546L000097]:info1:$fastboot -s devicename flash splloader_bak D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\u-boot-spl-16k-merge-sign.bin   || 
+[2026-04-28 09:54:23:977:977176  LJ546L000097]:info2:Sending 'splloader_bak' (246 KB)                   OKAY [  0.009s]
+[2026-04-28 09:54:23:988:988819  LJ546L000097]:info2:Writing 'splloader_bak'                            OKAY [  0.012s]
+[2026-04-28 09:54:23:989:989873  LJ546L000097]:info2:Finished. Total time: 0.023s
+[2026-04-28 09:54:23:996:996505  LJ546L000097]:info1:$fastboot -s devicename flash uboot_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\edk2-sign.bin   || 
+[2026-04-28 09:54:24:091:091656  LJ546L000097]:info2:Sending 'uboot_ab' (1025 KB)                       OKAY [  0.036s]
+[2026-04-28 09:54:24:123:123229  LJ546L000097]:info2:Writing 'uboot_ab'                                 OKAY [  0.032s]
+[2026-04-28 09:54:24:124:124193  LJ546L000097]:info2:Finished. Total time: 0.071s
+[2026-04-28 09:54:24:131:131532  LJ546L000097]:info1:$fastboot -s devicename flash trustos_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\tos-sign.bin   || 
+[2026-04-28 09:54:24:343:343681  LJ546L000097]:info2:Sending 'trustos_ab' (4341 KB)                     OKAY [  0.153s]
+[2026-04-28 09:54:24:436:436246  LJ546L000097]:info2:Writing 'trustos_ab'                               OKAY [  0.093s]
+[2026-04-28 09:54:24:437:437481  LJ546L000097]:info2:Finished. Total time: 0.249s
+[2026-04-28 09:54:24:443:443171  LJ546L000097]:info1:$fastboot -s devicename flash teecfg_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\teecfg-sign.bin   || 
+[2026-04-28 09:54:24:508:508799  LJ546L000097]:info2:Sending 'teecfg_ab' (121 KB)                       OKAY [  0.005s]
+[2026-04-28 09:54:24:524:524941  LJ546L000097]:info2:Writing 'teecfg_ab'                                OKAY [  0.015s]
+[2026-04-28 09:54:24:525:525327  LJ546L000097]:info2:Finished. Total time: 0.024s
+[2026-04-28 09:54:24:533:533177  LJ546L000097]:info1:$fastboot -s devicename flash sml_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\sml-sign.bin   || 
+[2026-04-28 09:54:24:608:608777  LJ546L000097]:info2:Sending 'sml_ab' (309 KB)                          OKAY [  0.010s]
+[2026-04-28 09:54:24:627:627323  LJ546L000097]:info2:Writing 'sml_ab'                                   OKAY [  0.018s]
+[2026-04-28 09:54:24:628:628320  LJ546L000097]:info2:Finished. Total time: 0.032s
+[2026-04-28 09:54:24:636:636363  LJ546L000097]:info1:$fastboot -s devicename flash nr_downloadnv_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\QogirN5_PS_XM_nvitem.bin   || 
+[2026-04-28 09:54:25:568:568326  LJ546L000097]:info2:Sending 'nr_downloadnv_ab' (26159 KB)              OKAY [  0.869s]
+[2026-04-28 09:54:26:143:143839  LJ546L000097]:info2:Writing 'nr_downloadnv_ab'                         OKAY [  0.575s]
+[2026-04-28 09:54:26:145:145107  LJ546L000097]:info2:Finished. Total time: 1.449s
+[2026-04-28 09:54:26:153:153601  LJ546L000097]:info1:$fastboot -s devicename flash nr_modem_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\nr_modem.img   || 
+[2026-04-28 09:54:27:931:931139  LJ546L000097]:info2:Sending 'nr_modem_ab' (51200 KB)                   OKAY [  1.717s]
+[2026-04-28 09:54:28:829:829492  LJ546L000097]:info2:Writing 'nr_modem_ab'                              OKAY [  0.898s]
+[2026-04-28 09:54:28:830:830510  LJ546L000097]:info2:Finished. Total time: 2.619s
+[2026-04-28 09:54:28:837:837061  LJ546L000097]:info1:$fastboot -s devicename flash nr_deltanv_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\QogirN5_PS_XM_deltanv.bin   || 
+[2026-04-28 09:54:28:908:908791  LJ546L000097]:info2:Sending 'nr_deltanv_ab' (523 KB)                   OKAY [  0.019s]
+[2026-04-28 09:54:28:922:922928  LJ546L000097]:info2:Writing 'nr_deltanv_ab'                            OKAY [  0.015s]
+[2026-04-28 09:54:28:923:923937  LJ546L000097]:info2:Finished. Total time: 0.036s
+[2026-04-28 09:54:28:930:930249  LJ546L000097]:info1:$fastboot -s devicename flash nr_phy_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\nr_phy.img   || 
+[2026-04-28 09:54:30:688:688513  LJ546L000097]:info2:Sending 'nr_phy_ab' (51200 KB)                     OKAY [  1.703s]
+[2026-04-28 09:54:31:560:560941  LJ546L000097]:info2:Writing 'nr_phy_ab'                                OKAY [  0.873s]
+[2026-04-28 09:54:31:563:563052  LJ546L000097]:info2:Finished. Total time: 2.580s
+[2026-04-28 09:54:31:568:568279  LJ546L000097]:info1:$fastboot -s devicename flash l_agdsp_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\l_agdsp.img   || 
+[2026-04-28 09:54:32:135:135902  LJ546L000097]:info2:Sending 'l_agdsp_ab' (15360 KB)                    OKAY [  0.506s]
+[2026-04-28 09:54:32:408:408236  LJ546L000097]:info2:Writing 'l_agdsp_ab'                               OKAY [  0.271s]
+[2026-04-28 09:54:32:410:410244  LJ546L000097]:info2:Finished. Total time: 0.781s
+[2026-04-28 09:54:32:420:420532  LJ546L000097]:info1:$fastboot -s devicename flash pm_sys_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\pm_sys.img   || 
+[2026-04-28 09:54:32:508:508019  LJ546L000097]:info2:Sending 'pm_sys_ab' (1024 KB)                      OKAY [  0.033s]
+[2026-04-28 09:54:32:537:537844  LJ546L000097]:info2:Writing 'pm_sys_ab'                                OKAY [  0.031s]
+[2026-04-28 09:54:32:538:538856  LJ546L000097]:info2:Finished. Total time: 0.067s
+[2026-04-28 09:54:32:544:544938  LJ546L000097]:info1:$fastboot -s devicename flash ch_sys_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\ch_sys.img   || 
+[2026-04-28 09:54:33:157:157093  LJ546L000097]:info2:Sending 'ch_sys_ab' (16384 KB)                     OKAY [  0.550s]
+[2026-04-28 09:54:33:431:431643  LJ546L000097]:info2:Writing 'ch_sys_ab'                                OKAY [  0.275s]
+[2026-04-28 09:54:33:432:432515  LJ546L000097]:info2:Finished. Total time: 0.828s
+[2026-04-28 09:54:33:443:443214  LJ546L000097]:info1:$fastboot -s devicename flash logo_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\logo.bin   || 
+[2026-04-28 09:54:33:514:514274  LJ546L000097]:info2:Sending 'logo_ab' (155 KB)                         OKAY [  0.006s]
+[2026-04-28 09:54:33:521:521822  LJ546L000097]:info2:Writing 'logo_ab'                                  OKAY [  0.008s]
+[2026-04-28 09:54:33:522:522853  LJ546L000097]:info2:Finished. Total time: 0.017s
+[2026-04-28 09:54:33:529:529931  LJ546L000097]:info1:$fastboot -s devicename flash fbootlogo_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\logo.bin   || 
+[2026-04-28 09:54:33:592:592986  LJ546L000097]:info2:Sending 'fbootlogo_ab' (155 KB)                    OKAY [  0.005s]
+[2026-04-28 09:54:33:600:600971  LJ546L000097]:info2:Writing 'fbootlogo_ab'                             OKAY [  0.009s]
+[2026-04-28 09:54:33:601:601941  LJ546L000097]:info2:Finished. Total time: 0.018s
+[2026-04-28 09:54:33:608:608821  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta.img   || 
+[2026-04-28 09:54:33:669:669953  LJ546L000097]:info2:Sending 'vbmeta_ab' (20 KB)                        OKAY [  0.002s]
+[2026-04-28 09:54:33:676:676499  LJ546L000097]:info2:Writing 'vbmeta_ab'                                OKAY [  0.007s]
+[2026-04-28 09:54:33:677:677457  LJ546L000097]:info2:Finished. Total time: 0.012s
+[2026-04-28 09:54:33:683:683985  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_system_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta_system.img   || 
+[2026-04-28 09:54:33:743:743397  LJ546L000097]:info2:Sending 'vbmeta_system_ab' (4 KB)                  OKAY [  0.001s]
+[2026-04-28 09:54:33:761:761592  LJ546L000097]:info2:Writing 'vbmeta_system_ab'                         OKAY [  0.017s]
+[2026-04-28 09:54:33:762:762593  LJ546L000097]:info2:Finished. Total time: 0.022s
+[2026-04-28 09:54:33:771:771000  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_system_ext_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta_system_ext.img   || 
+[2026-04-28 09:54:33:832:832693  LJ546L000097]:info2:Sending 'vbmeta_system_ext_ab' (4 KB)              OKAY [  0.000s]
+[2026-04-28 09:54:33:850:850681  LJ546L000097]:info2:Writing 'vbmeta_system_ext_ab'                     OKAY [  0.018s]
+[2026-04-28 09:54:33:851:851724  LJ546L000097]:info2:Finished. Total time: 0.022s
+[2026-04-28 09:54:33:857:857329  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_vendor_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta_vendor.img   || 
+[2026-04-28 09:54:33:915:915981  LJ546L000097]:info2:Sending 'vbmeta_vendor_ab' (4 KB)                  OKAY [  0.001s]
+[2026-04-28 09:54:33:934:934148  LJ546L000097]:info2:Writing 'vbmeta_vendor_ab'                         OKAY [  0.017s]
+[2026-04-28 09:54:33:935:935148  LJ546L000097]:info2:Finished. Total time: 0.021s
+[2026-04-28 09:54:33:941:941060  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_product_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta_product.img   || 
+[2026-04-28 09:54:33:997:997132  LJ546L000097]:info2:Sending 'vbmeta_product_ab' (4 KB)                 OKAY [  0.001s]
+[2026-04-28 09:54:34:014:014943  LJ546L000097]:info2:Writing 'vbmeta_product_ab'                        OKAY [  0.018s]
+[2026-04-28 09:54:34:015:015503  LJ546L000097]:info2:Finished. Total time: 0.023s
+[2026-04-28 09:54:34:021:021983  LJ546L000097]:info1:$fastboot -s devicename flash vbmeta_odm_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vbmeta_odm.img   || 
+[2026-04-28 09:54:34:081:081179  LJ546L000097]:info2:Sending 'vbmeta_odm_ab' (4 KB)                     OKAY [  0.002s]
+[2026-04-28 09:54:34:099:099315  LJ546L000097]:info2:Writing 'vbmeta_odm_ab'                            OKAY [  0.018s]
+[2026-04-28 09:54:34:099:099624  LJ546L000097]:info2:Finished. Total time: 0.022s
+[2026-04-28 09:54:34:105:105489  LJ546L000097]:info1:$fastboot -s devicename flash vendor_boot_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\vendor_boot.img   || 
+[2026-04-28 09:54:37:577:577379  LJ546L000097]:info2:Sending 'vendor_boot_ab' (102400 KB)               OKAY [  3.412s]
+[2026-04-28 09:54:39:289:289235  LJ546L000097]:info2:Writing 'vendor_boot_ab'                           OKAY [  1.711s]
+[2026-04-28 09:54:39:296:296282  LJ546L000097]:info1:$fastboot -s devicename flash init_boot_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\init_boot.img   || 
+[2026-04-28 09:54:39:331:331708  LJ546L000097]:info2:Finished. Total time: 5.126s
+[2026-04-28 09:54:39:623:623215  LJ546L000097]:info2:Sending 'init_boot_ab' (8192 KB)                   OKAY [  0.265s]
+[2026-04-28 09:54:39:773:773212  LJ546L000097]:info2:Writing 'init_boot_ab'                             OKAY [  0.150s]
+[2026-04-28 09:54:39:782:782296  LJ546L000097]:info2:Finished. Total time: 0.419s
+[2026-04-28 09:54:39:782:782296  LJ546L000097]:info1:$fastboot -s devicename flash dtbo_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\dtbo.img   || 
+[2026-04-28 09:54:40:928:928055  LJ546L000097]:info2:Sending 'dtbo_ab' (32768 KB)                       OKAY [  1.086s]
+[2026-04-28 09:54:41:471:471420  LJ546L000097]:info2:Writing 'dtbo_ab'                                  OKAY [  0.543s]
+[2026-04-28 09:54:41:472:472413  LJ546L000097]:info2:Finished. Total time: 1.632s
+[2026-04-28 09:54:41:478:478317  LJ546L000097]:info1:$fastboot -s devicename flash countrycode_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\countrycode.img   || 
+[2026-04-28 09:54:41:575:575826  LJ546L000097]:info2:Sending 'countrycode_ab' (1024 KB)                 OKAY [  0.035s]
+[2026-04-28 09:54:41:596:596413  LJ546L000097]:info2:Writing 'countrycode_ab'                           OKAY [  0.021s]
+[2026-04-28 09:54:41:597:597311  LJ546L000097]:info2:Finished. Total time: 0.059s
+[2026-04-28 09:54:41:605:605606  LJ546L000097]:info1:$fastboot -s devicename flash cache D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\cache.img   || 
+[2026-04-28 09:54:41:768:768674  LJ546L000097]:info2:Sending 'cache' (2232 KB)                          OKAY [  0.072s]
+[2026-04-28 09:54:41:831:831373  LJ546L000097]:info2:Writing 'cache'                                    OKAY [  0.063s]
+[2026-04-28 09:54:41:832:832553  LJ546L000097]:info2:Finished. Total time: 0.142s
+[2026-04-28 09:54:41:840:840328  LJ546L000097]:info1:$fastboot -s devicename flash rescue D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\rescue.img   || 
+[2026-04-28 09:54:41:910:910017  LJ546L000097]:info2:Sending 'rescue' (44 KB)                           OKAY [  0.002s]
+[2026-04-28 09:54:41:924:924217  LJ546L000097]:info2:Writing 'rescue'                                   OKAY [  0.014s]
+[2026-04-28 09:54:41:925:925480  LJ546L000097]:info2:Finished. Total time: 0.023s
+[2026-04-28 09:54:41:931:931229  LJ546L000097]:info1:$fastboot -s devicename flash blackbox D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\blackbox.img   || 
+[2026-04-28 09:54:42:069:069588  LJ546L000097]:info2:Sending 'blackbox' (2224 KB)                       OKAY [  0.071s]
+[2026-04-28 09:54:42:135:135559  LJ546L000097]:info2:Writing 'blackbox'                                 OKAY [  0.066s]
+[2026-04-28 09:54:42:136:136556  LJ546L000097]:info2:Finished. Total time: 0.146s
+[2026-04-28 09:54:42:144:144879  LJ546L000097]:info1:$fastboot -s devicename flash super D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\super.img   || 
+[2026-04-28 09:55:14:999:999782  LJ546L000097]:info2:Sending sparse 'super' 1/25 (262140 KB)            OKAY [  8.850s]
+[2026-04-28 09:55:18:173:173554  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.174s]
+[2026-04-28 09:55:26:930:930899  LJ546L000097]:info2:Sending sparse 'super' 2/25 (262140 KB)            OKAY [  8.756s]
+[2026-04-28 09:55:30:004:004891  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.073s]
+[2026-04-28 09:55:38:867:867847  LJ546L000097]:info2:Sending sparse 'super' 3/25 (262140 KB)            OKAY [  8.863s]
+[2026-04-28 09:55:41:948:948922  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.080s]
+[2026-04-28 09:55:50:748:748533  LJ546L000097]:info2:Sending sparse 'super' 4/25 (262140 KB)            OKAY [  8.800s]
+[2026-04-28 09:55:53:810:810841  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.062s]
+[2026-04-28 09:56:02:672:672127  LJ546L000097]:info2:Sending sparse 'super' 5/25 (262140 KB)            OKAY [  8.860s]
+[2026-04-28 09:56:05:734:734539  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.062s]
+[2026-04-28 09:56:14:629:629097  LJ546L000097]:info2:Sending sparse 'super' 6/25 (262140 KB)            OKAY [  8.894s]
+[2026-04-28 09:56:17:709:709419  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.080s]
+[2026-04-28 09:56:26:641:641629  LJ546L000097]:info2:Sending sparse 'super' 7/25 (262140 KB)            OKAY [  8.932s]
+[2026-04-28 09:56:29:694:694519  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.053s]
+[2026-04-28 09:56:38:662:662489  LJ546L000097]:info2:Sending sparse 'super' 8/25 (262140 KB)            OKAY [  8.967s]
+[2026-04-28 09:56:41:767:767604  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.104s]
+[2026-04-28 09:56:50:670:670398  LJ546L000097]:info2:Sending sparse 'super' 9/25 (262140 KB)            OKAY [  8.902s]
+[2026-04-28 09:56:53:739:739208  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.069s]
+[2026-04-28 09:57:02:624:624712  LJ546L000097]:info2:Sending sparse 'super' 10/25 (262140 KB)           OKAY [  8.885s]
+[2026-04-28 09:57:05:706:706596  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.082s]
+[2026-04-28 09:57:14:565:565506  LJ546L000097]:info2:Sending sparse 'super' 11/25 (262140 KB)           OKAY [  8.858s]
+[2026-04-28 09:57:17:634:634391  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.069s]
+[2026-04-28 09:57:26:427:427109  LJ546L000097]:info2:Sending sparse 'super' 12/25 (262140 KB)           OKAY [  8.792s]
+[2026-04-28 09:57:29:496:496507  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.069s]
+[2026-04-28 09:57:37:882:882927  LJ546L000097]:info2:Sending sparse 'super' 13/25 (250728 KB)           OKAY [  8.386s]
+[2026-04-28 09:57:40:978:978200  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.096s]
+[2026-04-28 09:57:49:762:762644  LJ546L000097]:info2:Sending sparse 'super' 14/25 (260928 KB)           OKAY [  8.784s]
+[2026-04-28 09:57:52:882:882510  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.120s]
+[2026-04-28 09:58:01:689:689286  LJ546L000097]:info2:Sending sparse 'super' 15/25 (257004 KB)           OKAY [  8.806s]
+[2026-04-28 09:58:04:810:810062  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.121s]
+[2026-04-28 09:58:13:711:711537  LJ546L000097]:info2:Sending sparse 'super' 16/25 (262140 KB)           OKAY [  8.901s]
+[2026-04-28 09:58:16:777:777185  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.066s]
+[2026-04-28 09:58:25:570:570255  LJ546L000097]:info2:Sending sparse 'super' 17/25 (262140 KB)           OKAY [  8.793s]
+[2026-04-28 09:58:28:709:709233  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.138s]
+[2026-04-28 09:58:37:613:613633  LJ546L000097]:info2:Sending sparse 'super' 18/25 (262140 KB)           OKAY [  8.903s]
+[2026-04-28 09:58:40:680:680580  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.068s]
+[2026-04-28 09:58:49:256:256486  LJ546L000097]:info2:Sending sparse 'super' 19/25 (254736 KB)           OKAY [  8.576s]
+[2026-04-28 09:58:52:317:317048  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.061s]
+[2026-04-28 09:59:00:316:316602  LJ546L000097]:info2:Sending sparse 'super' 20/25 (235504 KB)           OKAY [  7.999s]
+[2026-04-28 09:59:03:110:110847  LJ546L000097]:info2:Writing 'super'                                    OKAY [  2.795s]
+[2026-04-28 09:59:11:814:814591  LJ546L000097]:info2:Sending sparse 'super' 21/25 (262140 KB)           OKAY [  8.703s]
+[2026-04-28 09:59:14:878:878765  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.064s]
+[2026-04-28 09:59:23:699:699674  LJ546L000097]:info2:Sending sparse 'super' 22/25 (262140 KB)           OKAY [  8.822s]
+[2026-04-28 09:59:26:796:796172  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.096s]
+[2026-04-28 09:59:35:689:689484  LJ546L000097]:info2:Sending sparse 'super' 23/25 (262140 KB)           OKAY [  8.893s]
+[2026-04-28 09:59:38:793:793582  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.104s]
+[2026-04-28 09:59:47:677:677185  LJ546L000097]:info2:Sending sparse 'super' 24/25 (262140 KB)           OKAY [  8.882s]
+[2026-04-28 09:59:50:765:765619  LJ546L000097]:info2:Writing 'super'                                    OKAY [  3.088s]
+[2026-04-28 09:59:57:272:272091  LJ546L000097]:info2:Sending sparse 'super' 25/25 (193660 KB)           OKAY [  6.505s]
+[2026-04-28 09:59:59:537:537595  LJ546L000097]:info2:Writing 'super'                                    OKAY [  2.266s]
+[2026-04-28 09:59:59:546:546611  LJ546L000097]:info1:$fastboot -s devicename erase userdata   || 
+[2026-04-28 09:59:59:548:548595  LJ546L000097]:info2:Finished. Total time: 317.337s
+[2026-04-28 09:59:59:623:623602  LJ546L000097]:info2:Erasing 'userdata'                                 OKAY [  0.010s]
+[2026-04-28 09:59:59:624:624403  LJ546L000097]:info2:Finished. Total time: 0.011s
+[2026-04-28 09:59:59:632:632920  LJ546L000097]:info1:$fastboot -s devicename flash userdata D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\userdata.img   || 
+[2026-04-28 10:00:11:721:721264  LJ546L000097]:info2:Sending sparse 'userdata' 1/6 (262140 KB)          OKAY [  8.780s]
+[2026-04-28 10:00:15:538:538239  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  3.817s]
+[2026-04-28 10:00:24:289:289459  LJ546L000097]:info2:Sending sparse 'userdata' 2/6 (262140 KB)          OKAY [  8.750s]
+[2026-04-28 10:00:27:383:383870  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  3.096s]
+[2026-04-28 10:00:36:160:160525  LJ546L000097]:info2:Sending sparse 'userdata' 3/6 (262140 KB)          OKAY [  8.776s]
+[2026-04-28 10:00:39:222:222312  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  3.062s]
+[2026-04-28 10:00:47:935:935289  LJ546L000097]:info2:Sending sparse 'userdata' 4/6 (262140 KB)          OKAY [  8.712s]
+[2026-04-28 10:00:51:040:040253  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  3.106s]
+[2026-04-28 10:00:59:832:832445  LJ546L000097]:info2:Sending sparse 'userdata' 5/6 (262140 KB)          OKAY [  8.791s]
+[2026-04-28 10:01:02:897:897178  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  3.065s]
+[2026-04-28 10:01:08:536:536703  LJ546L000097]:info2:Sending sparse 'userdata' 6/6 (170812 KB)          OKAY [  5.639s]
+[2026-04-28 10:01:10:534:534894  LJ546L000097]:info2:Writing 'userdata'                                 OKAY [  1.998s]
+[2026-04-28 10:01:10:546:546820  LJ546L000097]:info2:Finished. Total time: 70.846s
+[2026-04-28 10:01:10:543:543811  LJ546L000097]:info1:$fastboot -s devicename flash boot_ab D:\download\somalia_pre_in_global_images_OS3.0.260428.1.WBWINXM.PRE_16.0\images\boot.img   || 
+[2026-04-28 10:01:14:046:046754  LJ546L000097]:info2:Sending 'boot_ab' (102400 KB)                      OKAY [  3.431s]
+[2026-04-28 10:01:15:773:773729  LJ546L000097]:info2:Writing 'boot_ab'                                  OKAY [  1.727s]
+[2026-04-28 10:01:15:774:774730  LJ546L000097]:info2:Finished. Total time: 5.161s
+[2026-04-28 10:01:15:783:783469  LJ546L000097]:info1:$fastboot -s devicename oem cdms 
+[2026-04-28 10:01:15:844:844677  LJ546L000097]:info2:                                                   OKAY [  0.003s]
+[2026-04-28 10:01:15:845:845760  LJ546L000097]:info2:Finished. Total time: 0.004s
+[2026-04-28 10:01:15:850:850724  LJ546L000097]:info1:$fastboot -s devicename oem lks   2>&1  | findstr /r /c:"lks = *1"   || fastboot -s devicename oem lock   && exit /B 1 
+[2026-04-28 10:01:16:014:014572  LJ546L000097]:info2:                                                   OKAY [  0.029s]
+[2026-04-28 10:01:16:015:015572  LJ546L000097]:info2:Finished. Total time: 0.029s
+[2026-04-28 10:01:16:032:032575  LJ546L000097]:begin FlashDone
+[2026-04-28 10:01:16:033:033656  LJ546L000097]:errMsg is null
+[2026-04-28 10:01:16:038:038161  LJ546L000097]:begin checkPoint
+[2026-04-28 10:01:16:041:041217  LJ546L000097]:catch checkpoint (\$fastboot -s .* lock)
+[2026-04-28 10:01:16:042:042329  LJ546L000097]:flash done
+[2026-04-28 10:01:16:045:045509  LJ546L000097]:process exit.
+[2026-04-28 10:01:16:708:708423  LJ546L000097]:flashSuccess True
+[2026-04-28 10:01:16:712:712654  LJ546L000097]:isFactory False CheckCPUID False
+[2026-04-28 10:01:16:713:713661  LJ546L000097]:before:flashSuccess is True set IsUpdate:True set IsDone True
+[2026-04-28 10:01:16:718:718050  LJ546L000097]:after:flashSuccess is True set IsUpdate:false set IsDone true

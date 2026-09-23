@@ -1,0 +1,39 @@
+[2026-09-23 05:26:19:362:362723  wkbmq8pfbeaejbo7]:MiFlash 2025-07-20-0
+[2026-09-23 05:26:19:363:363723  wkbmq8pfbeaejbo7]:Thread id:11 Thread name:
+[2026-09-23 05:26:19:364:364723  wkbmq8pfbeaejbo7]:image path:C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0
+[2026-09-23 05:26:19:364:364723  wkbmq8pfbeaejbo7]:env android path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Google\Android"
+[2026-09-23 05:26:19:364:364723  wkbmq8pfbeaejbo7]:script :C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0\flash_all.bat
+[2026-09-23 05:26:19:376:376725  wkbmq8pfbeaejbo7]:Physical Memory Usage:2551808 Byte
+[2026-09-23 05:26:19:376:376725  wkbmq8pfbeaejbo7]:start process id 33824 name cmd
+[2026-09-23 05:26:19:420:420735  wkbmq8pfbeaejbo7]:info1:$if exist C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt (for /F "delims==" %a in (C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a ) ) 
+[2026-09-23 05:26:19:421:421735  wkbmq8pfbeaejbo7]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[2026-09-23 05:26:19:421:421735  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[2026-09-23 05:26:19:422:422735  wkbmq8pfbeaejbo7]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2026-09-23 05:26:19:529:529760  wkbmq8pfbeaejbo7]:info1:$(set version=1 ) 
+[2026-09-23 05:26:19:530:530760  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set version=0 
+[2026-09-23 05:26:19:530:530760  wkbmq8pfbeaejbo7]:info1:$set anticheck="antirollback check pass" 
+[2026-09-23 05:26:19:530:530760  wkbmq8pfbeaejbo7]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2026-09-23 05:26:19:530:530760  wkbmq8pfbeaejbo7]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[2026-09-23 05:26:19:562:562767  wkbmq8pfbeaejbo7]:info1:"antirollback check pass" 
+[2026-09-23 05:26:19:573:573769  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar product   2>&1  | findstr "ares"   || 
+[2026-09-23 05:26:19:628:628782  wkbmq8pfbeaejbo7]:info1:product: ares
+[2026-09-23 05:26:19:632:632783  wkbmq8pfbeaejbo7]:info1:"Now Check Finished ......"
+[2026-09-23 05:26:19:633:633783  wkbmq8pfbeaejbo7]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1"   && if 0 EQU 0 (
+[2026-09-23 05:26:19:633:633783  wkbmq8pfbeaejbo7]:info1:fastboot -s devicename flash crclist C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0\images\crclist.txt   ||  
+[2026-09-23 05:26:19:634:634784  wkbmq8pfbeaejbo7]:info1: fastboot -s devicename flash sparsecrclist C:\ares\ares_images_V14.0.4.0.TKJCNXM_13.0\images\sparsecrclist.txt   || 
+[2026-09-23 05:26:19:634:634784  wkbmq8pfbeaejbo7]:info1:) 
+[2026-09-23 05:26:19:664:664790  wkbmq8pfbeaejbo7]:info1:crc: 1
+[2026-09-23 05:26:19:699:699379  wkbmq8pfbeaejbo7]:info2:Warning: skip copying crclist image avb footer (crclist partition size: 0, crclist image size: 442).
+[2026-09-23 05:26:19:737:737389  wkbmq8pfbeaejbo7]:info2:Sending 'crclist' (0 KB)                           OKAY [  0.038s]
+[2026-09-23 05:26:19:740:740390  wkbmq8pfbeaejbo7]:info2:Writing 'crclist'                                  FAILED (remote: 'not allowed in locked state')
+[2026-09-23 05:26:19:741:741389  wkbmq8pfbeaejbo7]:info2:fastboot: error: Command failed
+[2026-09-23 05:26:19:741:741389  wkbmq8pfbeaejbo7]:info2:fastboot: error: Command failed
+[2026-09-23 05:26:19:746:746391  wkbmq8pfbeaejbo7]:info1:"Flash crclist error" 
+[2026-09-23 05:26:19:747:747391  wkbmq8pfbeaejbo7]:info1:"Flash crclist error" 
+[2026-09-23 05:26:19:754:754392  wkbmq8pfbeaejbo7]:begin FlashDone
+[2026-09-23 05:26:19:754:754392  wkbmq8pfbeaejbo7]:error:fastboot: error: Command failed
+[2026-09-23 05:26:19:754:754392  wkbmq8pfbeaejbo7]:process exit.
+[2026-09-23 05:26:20:732:732372  wkbmq8pfbeaejbo7]:flashSuccess False
+[2026-09-23 05:26:20:732:732372  wkbmq8pfbeaejbo7]:isFactory False CheckCPUID False
+[2026-09-23 05:26:20:733:733372  wkbmq8pfbeaejbo7]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2026-09-23 05:26:20:733:733372  wkbmq8pfbeaejbo7]:after:flashSuccess is False set IsUpdate:false set IsDone true

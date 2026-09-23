@@ -1,0 +1,44 @@
+[2025-12-18 16:26:25:815:815241  ba393d23]:MiFlash 2025-07-20-0
+[2025-12-18 16:26:25:820:820984  ba393d23]:Thread id:23 Thread name:
+[2025-12-18 16:26:25:822:822501  ba393d23]:image path:D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0
+[2025-12-18 16:26:25:822:822501  ba393d23]:env android path:"D:\download\MiFlash2025-07-20\Source\ThirdParty\Google\Android"
+[2025-12-18 16:26:25:824:824020  ba393d23]:script :D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0\flash_all.bat
+[2025-12-18 16:26:25:848:848834  ba393d23]:Physical Memory Usage:5607424 Byte
+[2025-12-18 16:26:25:848:848834  ba393d23]:start process id 37708 name cmd
+[2025-12-18 16:26:25:904:904351  ba393d23]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *xuanyuan"   || echo Missmatching image and device 
+[2025-12-18 16:26:26:010:010726  ba393d23]:info1:product: xuanyuan
+[2025-12-18 16:26:26:014:014779  ba393d23]:info1:$fastboot -s devicename getvar product   2>&1  | findstr /r /c:"^product: *xuanyuan"   || exit /B 1 
+[2025-12-18 16:26:26:084:084046  ba393d23]:info1:product: xuanyuan
+[2025-12-18 16:26:26:089:089090  ba393d23]:info1:$if exist "D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0\images\anti_version.txt" (for /F "usebackq" %a in ("D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0\images\anti_version.txt") do (set CURRENT_ANTI_VER=%a ) ) 
+[2025-12-18 16:26:26:091:091006  ba393d23]:info1:$(set CURRENT_ANTI_VER=1 ) 
+[2025-12-18 16:26:26:092:092020  ba393d23]:info1:$if [1] EQU [] set CURRENT_ANTI_VER=0 
+[2025-12-18 16:26:26:094:094010  ba393d23]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2025-12-18 16:26:26:209:209070  ba393d23]:info1:$(set version=1 ) 
+[2025-12-18 16:26:26:210:210088  ba393d23]:info1:$if [1] EQU [] set version=0 
+[2025-12-18 16:26:26:212:212071  ba393d23]:info1:$set anticheck="antirollback check pass" 
+[2025-12-18 16:26:26:213:213150  ba393d23]:info1:$if 1 GTR 1 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2025-12-18 16:26:26:214:214178  ba393d23]:info1:$echo "antirollback check pass"   | findstr /r /c:"pass"   || 
+[2025-12-18 16:26:26:260:260622  ba393d23]:info1:"antirollback check pass" 
+[2025-12-18 16:26:26:265:265632  ba393d23]:info1:$fastboot -s devicename getvar crc   2>&1  | findstr /r /c:"^crc: 1" 
+[2025-12-18 16:26:26:331:331377  ba393d23]:info1:$if 1 EQU 0 (
+[2025-12-18 16:26:26:332:332416  ba393d23]:info1:fastboot -s devicename flash crclist D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0\images\crclist.txt   ||  
+[2025-12-18 16:26:26:333:333381  ba393d23]:info1: fastboot -s devicename flash sparsecrclist D:\download\xuanyuan_in_global_images_OS3.0.251020.1.WOAINXM_16.0\images\sparsecrclist.txt   || 
+[2025-12-18 16:26:26:334:334391  ba393d23]:info1:) 
+[2025-12-18 16:26:26:336:336382  ba393d23]:info1:$fastboot -s devicename getvar partition-type:opcust   2>&1  | findstr /r /c:"^partition-type:opcust: raw" 
+[2025-12-18 16:26:26:402:402733  ba393d23]:info1:$if 1 EQU 0 (fastboot -s devicename erase opcust   || ) 
+[2025-12-18 16:26:26:403:403737  ba393d23]:info1:$fastboot -s devicename getvar partition-type:opconfig   2>&1  | findstr /r /c:"^partition-type:opconfig: raw" 
+[2025-12-18 16:26:26:475:475761  ba393d23]:info1:$if 1 EQU 0 (fastboot -s devicename erase opconfig   || ) 
+[2025-12-18 16:26:26:476:476730  ba393d23]:info1:$fastboot -s devicename erase boot_ab   || 
+[2025-12-18 16:26:26:547:547067  ba393d23]:info2:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[2025-12-18 16:26:26:548:548069  ba393d23]:info2:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[2025-12-18 16:26:26:550:550068  ba393d23]:info2:fastboot: error: Command failed
+[2025-12-18 16:26:26:553:553072  ba393d23]:info2:fastboot: error: Command failed
+[2025-12-18 16:26:26:553:553072  ba393d23]:info1:"Erase boot error" 
+[2025-12-18 16:26:26:557:557453  ba393d23]:info1:"Erase boot error" 
+[2025-12-18 16:26:26:560:560464  ba393d23]:begin FlashDone
+[2025-12-18 16:26:26:561:561455  ba393d23]:error:Erasing 'boot_ab'                                  FAILED (remote: 'Erase is not allowed in Lock State')
+[2025-12-18 16:26:26:563:563443  ba393d23]:process exit.
+[2025-12-18 16:26:26:822:822511  ba393d23]:flashSuccess False
+[2025-12-18 16:26:26:824:824509  ba393d23]:isFactory False CheckCPUID False
+[2025-12-18 16:26:26:825:825490  ba393d23]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2025-12-18 16:26:26:827:827468  ba393d23]:after:flashSuccess is False set IsUpdate:false set IsDone true

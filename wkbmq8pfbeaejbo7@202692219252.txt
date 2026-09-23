@@ -1,0 +1,7 @@
+[2026-09-22 19:02:52:368:368079  wkbmq8pfbeaejbo7]:MiFlash 2025-07-20-0
+[2026-09-22 19:02:52:368:368079  wkbmq8pfbeaejbo7]:Thread id:14 Thread name:
+[2026-09-22 19:02:52:397:397086  wkbmq8pfbeaejbo7]:'C:\Users\Yusuf\Desktop\ares_images_OS1.0.4.0.TKJCNXM_13.0' yolunun bir parçası bulunamadı.
+[2026-09-22 19:02:52:581:581482  wkbmq8pfbeaejbo7]:flashSuccess False
+[2026-09-22 19:02:52:582:582483  wkbmq8pfbeaejbo7]:isFactory False CheckCPUID False
+[2026-09-22 19:02:52:582:582483  wkbmq8pfbeaejbo7]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2026-09-22 19:02:52:583:583483  wkbmq8pfbeaejbo7]:after:flashSuccess is False set IsUpdate:false set IsDone true
