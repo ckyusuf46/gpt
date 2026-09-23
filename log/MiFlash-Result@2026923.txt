@@ -1,0 +1,9 @@
+[01:32:42]:1    wkbmq8pfbeaejbo7     326,6309274s     flash done
+[03:38:54]:1    wkbmq8pfbeaejbo7     518,9920541s     flash done
+[05:19:53]:54    wkbmq8pfbeaejbo7     1,2138053s     error:fastboot: error: Command failed
+[05:21:31]:54    wkbmq8pfbeaejbo7     0,5741401s     error:fastboot: error: Command failed
+[05:22:38]:1    wkbmq8pfbeaejbo7     1,0047755s     error:fastboot: error: Command failed
+[05:24:54]:1    wkbmq8pfbeaejbo7     1,0665122s     error:fastboot: error: Command failed
+[05:26:20]:1    wkbmq8pfbeaejbo7     1,369649s     error:fastboot: error: Command failed
+[05:42:29]:1    wkbmq8pfbeaejbo7     0,56086s     error:fastboot: error: Command failed
+[05:42:54]:1    wkbmq8pfbeaejbo7     1,1837778s     error:fastboot: error: Command failed

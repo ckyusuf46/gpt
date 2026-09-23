@@ -1,0 +1,24 @@
+[2026-09-22 19:03:57:972:972143  wkbmq8pfbeaejbo7]:MiFlash 2025-07-20-0
+[2026-09-22 19:03:57:973:973142  wkbmq8pfbeaejbo7]:Thread id:10 Thread name:
+[2026-09-22 19:03:57:973:973142  wkbmq8pfbeaejbo7]:image path:D:\Yeni klasör\ares_images_OS1.0.4.0.TKJCNXM_13.0
+[2026-09-22 19:03:57:974:974142  wkbmq8pfbeaejbo7]:env android path:"C:\Users\Yusuf\Desktop\MiFlash20250720\Source\ThirdParty\Google\Android"
+[2026-09-22 19:03:57:974:974142  wkbmq8pfbeaejbo7]:script :D:\Yeni klasör\ares_images_OS1.0.4.0.TKJCNXM_13.0\flash_all.bat
+[2026-09-22 19:03:57:986:986146  wkbmq8pfbeaejbo7]:Physical Memory Usage:3330048 Byte
+[2026-09-22 19:03:57:987:987146  wkbmq8pfbeaejbo7]:start process id 19156 name cmd
+[2026-09-22 19:03:58:013:013151  wkbmq8pfbeaejbo7]:info1:$if exist D:\Yeni klasör\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\anti_version.txt (for /f "delims==" %a in (D:\Yeni klasör\ares_images_OS1.0.4.0.TKJCNXM_13.0\images\anti_version.txt) do (set CURRENT_ANTI_VER=%a)) 
+[2026-09-22 19:03:58:013:013151  wkbmq8pfbeaejbo7]:info1:$if [] EQU [] set CURRENT_ANTI_VER=0 
+[2026-09-22 19:03:58:013:013151  wkbmq8pfbeaejbo7]:info1:$for /F "tokens=2 delims=: " %i in ('fastboot -s devicename getvar anti 2>&1 | findstr /r /c:"anti:"') do (set version=%i ) 
+[2026-09-22 19:03:58:071:071701  wkbmq8pfbeaejbo7]:info1:$(set version=1 ) 
+[2026-09-22 19:03:58:071:071701  wkbmq8pfbeaejbo7]:info1:$if [1] EQU [] set version=0 
+[2026-09-22 19:03:58:071:071701  wkbmq8pfbeaejbo7]:info1:$set anticheck="antirollback check pass" 
+[2026-09-22 19:03:58:072:072701  wkbmq8pfbeaejbo7]:info1:$if 1 GTR 0 set anticheck="Current device antirollback version is greater than this pakcage" 
+[2026-09-22 19:03:58:072:072701  wkbmq8pfbeaejbo7]:info1:$echo "Current device antirollback version is greater than this pakcage"   | findstr /r /c:"pass"   || 
+[2026-09-22 19:03:58:099:099708  wkbmq8pfbeaejbo7]:info1:"Antirollback check error" 
+[2026-09-22 19:03:58:099:099708  wkbmq8pfbeaejbo7]:info1:"Antirollback check error" 
+[2026-09-22 19:03:58:102:102708  wkbmq8pfbeaejbo7]:begin FlashDone
+[2026-09-22 19:03:58:104:104709  wkbmq8pfbeaejbo7]:error:"Antirollback check error" 
+[2026-09-22 19:03:58:104:104709  wkbmq8pfbeaejbo7]:process exit.
+[2026-09-22 19:03:58:576:576814  wkbmq8pfbeaejbo7]:flashSuccess False
+[2026-09-22 19:03:58:576:576814  wkbmq8pfbeaejbo7]:isFactory False CheckCPUID False
+[2026-09-22 19:03:58:576:576814  wkbmq8pfbeaejbo7]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2026-09-22 19:03:58:576:576814  wkbmq8pfbeaejbo7]:after:flashSuccess is False set IsUpdate:false set IsDone true

@@ -1,0 +1,11 @@
+[2026-04-08 10:03:35:759:759223]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:03:36:482:482477]:add device ba393d23 index 1
+[2026-04-08 10:04:00:468:468733]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:04:00:960:960012]:FlashingDevice.flashDeviceList.Remove ba393d23
+[2026-04-08 10:04:17:597:597448]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:04:38:621:621986]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:04:49:060:060162]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:08:13:667:667203]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:08:20:321:321707]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:17:18:587:587251]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"
+[2026-04-08 10:17:20:697:697115]:lsusb path:"D:\version\MiFlashToolBox_1.1.814.83\MiFlashToolBox\XiaoMiFlash\Source\ThirdParty\Qualcomm\fh_loader\lsusb.exe"

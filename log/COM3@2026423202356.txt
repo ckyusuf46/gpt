@@ -1,0 +1,19 @@
+[2026-04-23 20:23:56:621:621263  COM3]:MiFlash 2025-07-20-0
+[2026-04-23 20:23:56:631:631254  COM3]:flash in thread name:COM3,id:7
+[2026-04-23 20:23:56:645:645574  COM3]:sw in images
+[2026-04-23 20:23:56:651:651305  COM3]:vboytest do open :
+[2026-04-23 20:23:56:655:655672  COM3]: serial port COM3 opend successfully
+[2026-04-23 20:23:56:658:658650  COM3]:[COM3]:start flash.
+[2026-04-23 20:23:57:294:294947  COM3]:cannot receive hello packet,MiFlash is trying to reset status!
+[2026-04-23 20:23:58:425:425247  COM3]:try to reset status.
+[2026-04-23 20:23:58:427:427249  COM3]:清理端口数据，准备发送SAHARA_SWITCH_MODE_PACKET
+[2026-04-23 20:23:58:431:431232  COM3]:Switch mode back
+[2026-04-23 20:23:58:431:431232  COM3]:cannot receive hello packet,MiFlash is trying to reset status!
+[2026-04-23 20:23:58:492:492980  COM3]:System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 XiaoMiFlash.code.bl.SerialPortDevice.SaharaDownloadProgrammer(Int32 programmertype)
+   在 XiaoMiFlash.code.bl.SerialPortDevice.XiaomiFlashNew()     在 XiaoMiFlash.code.bl.SerialPortDevice.SaharaDownloadProgrammer(Int32 programmertype)
+   在 XiaoMiFlash.code.bl.SerialPortDevice.XiaomiFlashNew()
+[2026-04-23 20:23:58:538:538292  COM3]:flashSuccess False
+[2026-04-23 20:23:58:542:542683  COM3]:isFactory False CheckCPUID False
+[2026-04-23 20:23:58:543:543721  COM3]:before:flashSuccess is False set IsUpdate:True set IsDone True
+[2026-04-23 20:23:58:545:545748  COM3]:after:flashSuccess is False set IsUpdate:false set IsDone true

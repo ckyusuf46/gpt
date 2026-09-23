@@ -1,0 +1,9 @@
+[20:23:58]:3    COM3     2.0043633s     未将对象引用设置到对象的实例。
+[20:24:39]:3    COM3     4.4721358s     response:<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<log value="ERROR: Only nop and sig tag can be recevied before authentication." /></data><?xml version="1.0" encoding="UTF-8" ?>
+<data>
+<response value="NAK" rawmode="false" /></data>
+
+
+[20:31:50]:3    COM3     435.1005091s     flash done
